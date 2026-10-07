@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180">
+<g fill="none" stroke="#4b2a18" stroke-width="6" stroke-linecap="round">
+<path d="M25 135 Q80 45 125 60 Q160 70 178 0"/>
+</g>
+
+<path d="M25 135 Q80 45 125 60 Q160 70 178 0"
+      fill="none" stroke="#d19a61" stroke-width="2"/>
+
+<g stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+<path d="M145 25 L170 5"/>
+<path d="M150 35 L178 30"/>
+<path d="M140 15 L145 -5"/>
+</g>
+</svg>

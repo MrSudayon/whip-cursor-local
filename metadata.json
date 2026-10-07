@@ -1,0 +1,9 @@
+{
+    "uuid": "whip-cursor@local",
+    "name": "Whip Cursor",
+    "description": "Whip animation when clicking the mouse.",
+    "version": 1,
+    "shell-version": [
+        "46"
+    ]
+}
