@@ -105,7 +105,7 @@ export default class WhipCursor extends Extension {
         console.log(`WHIP: CLICK at ${x}, ${y}`);
 
         const actor = new St.Widget({
-            width: 180,
+            width: 300,
             height: 180,
             reactive: false,
         });
@@ -113,8 +113,8 @@ export default class WhipCursor extends Extension {
         Main.layoutManager.addChrome(actor);
 
         actor.set_position(
-            x - 90,
-            y - 90
+            x - 700,
+            y - 400
         );
 
         this._animations.push(actor);
@@ -124,16 +124,15 @@ export default class WhipCursor extends Extension {
 
     _animateWhip(actor, frame) {
         const frames = [
-            'whip_fram_01_rest.svg',
-            'whip_fram_02_windup.svg',
-            'whip_fram_03_overhead.svg',
-            'whip_fram_04_throw.svg',
-            'whip_fram_05_wave.svg',
-            'whip_fram_06_straighten.svg',
-            'whip_fram_07_crack.svg',
-            'whip_fram_08_rebound.svg',
-            'whip_fram_09_settle.svg',
-
+            'whip_frame_01_rest.svg',
+            'whip_frame_02_windup.svg',
+            'whip_frame_03_overhead.svg',
+            'whip_frame_04_throw.svg',
+            'whip_frame_05_wave.svg',
+            'whip_frame_06_straighten.svg',
+            'whip_frame_07_crack.svg',
+            'whip_frame_08_rebound.svg',
+            'whip_frame_09_settle.svg',
         ];
 
         if (frame >= frames.length) {
@@ -154,7 +153,7 @@ export default class WhipCursor extends Extension {
             gicon: new Gio.FileIcon({
                 file: file,
             }),
-            icon_size: 180,
+            icon_size: 850,
         });
 
         actor.add_child(icon);
