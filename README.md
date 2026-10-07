@@ -1,10 +1,7 @@
-**WHIP CURSOR — INSTALLATION GUIDE
-**
-Ubuntu GNOME 46 • Wayland
+**WHIP CURSOR — INSTALLATION GUIDE**
 
 Whip Cursor adds a whip animation whenever you left-click.
 
-***************************************************************************************
 _HOW IT WORKS_
 
     Physical Mouse
@@ -24,14 +21,10 @@ _HOW IT WORKS_
               
 ****************************************************************************************
 
-
 The project has two separate components:
-
 1.  GNOME Extension Displays the whip animation.
 2.  Python Mouse Daemon Detects the physical left-click and triggers the
     GNOME extension.
-
-No D-Bus is required. for now :P sa bisaya ngayun lang uy
 
 REQUIREMENTS
 -   Ubuntu with GNOME Shell v46
@@ -40,7 +33,6 @@ REQUIREMENTS
 -   Py3
 
 PROJECT STRUCTURE
-
 After downloading/cloning the repository:
 
 ~/whip-cursor/
