@@ -27,8 +27,9 @@ The project has two separate components:
     GNOME extension.
 
 REQUIREMENTS
--   Ubuntu with GNOME Shell v46
--   bash: Wayland session
+-   Ubuntu 24.04LTS or Fedora 40
+-   Gnome Shell
+-   Wayland session
 -   A physical mouse ofc
 -   Py3
 
