@@ -1,6 +1,7 @@
 import St from 'gi://St';
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
+import GSound from 'gi://GSound';
 
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -8,6 +9,9 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 export default class WhipCursor extends Extension {
     enable() {
         console.log('WHIP: ENABLED');
+
+        this._sound = new GSound.Context();
+        this._sound.init();
 
         this._triggerFile = '/tmp/whip-cursor-trigger';
         this._lastSize = 0;
@@ -42,6 +46,20 @@ export default class WhipCursor extends Extension {
         );
 
         console.log('WHIP: READY');
+    }
+
+    _playWhipSound() {
+        try {
+            const soundFile = `${this.path}/assets/whip-crack.ogg`;
+
+            this._sound.play_simple({
+                [GSound.ATTR_MEDIA_FILENAME]: soundFile,
+                [GSound.ATTR_CANBERRA_VOLUME]: '5',
+            });
+
+        } catch (error) {
+            console.error(`WHIP: Sound error: ${error}`);
+        }
     }
 
     _updateTriggerPosition() {
@@ -104,6 +122,8 @@ export default class WhipCursor extends Extension {
 
         console.log(`WHIP: CLICK at ${x}, ${y}`);
 
+        this._playWhipSound();
+
         const actor = new St.Widget({
             width: 300,
             height: 90,
@@ -131,6 +151,7 @@ export default class WhipCursor extends Extension {
             'whip_frame_05_wave.svg',
             'whip_frame_06_straighten.svg',
             'whip_frame_07_crack.svg',
+            'whip-crack.ogg',
             'whip_frame_08_rebound.svg',
             'whip_frame_09_settle.svg',
         ];
