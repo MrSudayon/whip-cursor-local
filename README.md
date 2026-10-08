@@ -21,7 +21,7 @@ _HOW IT WORKS_
               
 ****************************************************************************************
 
-The project has two separate components:
+Componentsz:
 1.  GNOME Extension Displays the whip animation.
 2.  Python Mouse Daemon Detects the physical left-click and triggers the
     GNOME extension.
