@@ -106,15 +106,15 @@ export default class WhipCursor extends Extension {
 
         const actor = new St.Widget({
             width: 300,
-            height: 180,
+            height: 90,
             reactive: false,
         });
 
         Main.layoutManager.addChrome(actor);
 
         actor.set_position(
-            x - 700,
-            y - 400
+            x - 750,
+            y - 450
         );
 
         this._animations.push(actor);
@@ -153,7 +153,7 @@ export default class WhipCursor extends Extension {
             gicon: new Gio.FileIcon({
                 file: file,
             }),
-            icon_size: 850,
+            icon_size: 750,
         });
 
         actor.add_child(icon);
